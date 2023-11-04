@@ -1,0 +1,4 @@
+.header-logo {
+    height: 50px; /* Adjust as needed */
+    width: auto; /* This will keep the aspect ratio of the image */
+}
