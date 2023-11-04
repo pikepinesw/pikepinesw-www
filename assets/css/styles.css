@@ -3,10 +3,9 @@
     width: auto; /* This will keep the aspect ratio of the image */
 }
 
-.footer-content {
-    /* Adjust padding as needed */
-    padding-top: 20px;
-    padding-bottom: 20px;
+body, html {
+    height: 100%;
+    background-color: #fff; /* Set background color to white */
 }
 
 .coming-soon {
@@ -20,20 +19,9 @@
     /* No changes needed here unless you want to style the links differently 
 } */
 
-.footer-links .nav-link {
-    display: inline; /* Display links inline */
-    padding: 0 10px; /* Add padding between links */
-    font-size: 0.9em; /* Smaller font size for the links */
-}
-
 .footer-copy {
     margin-top: 10px; /* Spacing between links and copyright */
     font-size: 0.75em; /* Smaller font size for the copyright */
-}
-
-body, html {
-    height: 100%;
-    background-color: #fff; /* Set background color to white */
 }
 
 #logo {
@@ -51,5 +39,17 @@ body, html {
 
 footer.mt-auto {
     margin-top: auto; /* Push footer to the bottom */
+}
+
+.footer-links .nav-link {
+    display: inline; /* Display links inline */
+    padding: 0 10px; /* Add padding between links */
+    font-size: 0.9em; /* Smaller font size for the links */
+}
+
+.footer-content {
+    /* Adjust padding as needed */
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
