@@ -1,4 +1,55 @@
 .header-logo {
-    height: 50px; /* Adjust as needed */
+    height: 75px; /* Adjust as needed */
     width: auto; /* This will keep the aspect ratio of the image */
 }
+
+.footer-content {
+    /* Adjust padding as needed */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.coming-soon {
+    font-size: 1rem; /* Adjust the font size as needed */
+    color: #6c757d; /* This is a Bootstrap default color for muted text */
+    margin-top: 0.5rem; /* Adjust the space between the logo and the text */
+    font-weight: 400; /* Normal font weight */
+}
+
+/* .footer-links {
+    /* No changes needed here unless you want to style the links differently 
+} */
+
+.footer-links .nav-link {
+    display: inline; /* Display links inline */
+    padding: 0 10px; /* Add padding between links */
+    font-size: 0.9em; /* Smaller font size for the links */
+}
+
+.footer-copy {
+    margin-top: 10px; /* Spacing between links and copyright */
+    font-size: 0.75em; /* Smaller font size for the copyright */
+}
+
+body, html {
+    height: 100%;
+    background-color: #fff; /* Set background color to white */
+}
+
+#logo {
+    max-width: 300px; /* Adjust the size of the logo as desired */
+    /* padding-top: 10%; Space from the top */
+
+}
+
+.container.my-auto {
+    flex-grow: 1; /* Grow to use available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+}
+
+footer.mt-auto {
+    margin-top: auto; /* Push footer to the bottom */
+}
+
