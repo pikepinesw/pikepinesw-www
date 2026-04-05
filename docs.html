@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pike & Pine Software | Docs</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-white text-slate-800">
+
+    <!-- Nav -->
+    <header class="border-b border-slate-200 bg-white">
+        <nav class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="index.html">
+                <img src="assets/images/logo_pikeandpine.png" alt="Pike & Pine Software" class="h-12 w-auto">
+            </a>
+            <button id="menu-toggle" class="sm:hidden p-2 rounded text-slate-600 hover:bg-slate-100" aria-label="Toggle menu">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+            <ul id="nav-links" class="hidden sm:flex gap-6 text-sm font-medium text-slate-600">
+                <li><a href="index.html" class="hover:text-green-700 transition-colors">Home</a></li>
+                <li><a href="products.html" class="hover:text-green-700 transition-colors">Products</a></li>
+                <li><a href="docs.html" class="text-green-700 font-semibold">Docs</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu" class="hidden sm:hidden border-t border-slate-100 bg-white px-4 py-3">
+            <ul class="flex flex-col gap-3 text-sm font-medium text-slate-600">
+                <li><a href="index.html" class="hover:text-green-700">Home</a></li>
+                <li><a href="products.html" class="hover:text-green-700">Products</a></li>
+                <li><a href="docs.html" class="text-green-700 font-semibold">Docs</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="flex-1 flex items-center justify-center">
+        <div class="text-center px-4 py-20">
+            <div class="mx-auto w-16 h-16 bg-slate-100 rounded-2xl flex items-center justify-center mb-6">
+                <svg class="w-8 h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                </svg>
+            </div>
+            <span class="inline-block bg-amber-100 text-amber-700 text-xs font-semibold px-3 py-1 rounded-full mb-4">Coming Soon</span>
+            <h1 class="text-3xl font-bold text-slate-900 mb-3">Documentation</h1>
+            <p class="text-slate-500 max-w-sm mx-auto">
+                Guides, references, and API docs are on their way. Check back once our products launch.
+            </p>
+            <a href="index.html" class="mt-8 inline-block text-green-700 font-semibold text-sm hover:underline">← Back to Home</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 bg-slate-50">
+        <div class="max-w-5xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-500">
+            <span>&copy; 2026 Pike & Pine Software LLC</span>
+            <div class="flex gap-5">
+                <a href="contact.html" class="hover:text-green-700 transition-colors">Contact</a>
+                <a href="about.html" class="hover:text-green-700 transition-colors">About</a>
+                <a href="privacy.html" class="hover:text-green-700 transition-colors">Privacy</a>
+                <a href="terms.html" class="hover:text-green-700 transition-colors">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+        toggle.addEventListener('click', () => menu.classList.toggle('hidden'));
+    </script>
+</body>
+</html>

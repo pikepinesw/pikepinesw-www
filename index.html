@@ -4,75 +4,123 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pike & Pine | Home</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Pike & Pine Software | Home</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-brand: #2d6a4f;
+            --color-brand-light: #52b788;
+        }
+    </style>
 </head>
-<body class="d-flex flex-column min-vh-100">
-    <!-- Common header for all pages -->
-    <header>
-        <!-- Bootstrap 5 Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="assets/images/logo_pikeandpine.png" alt="Pike & Pine Logo" id="logo" class="header-logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="products.html">Products</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="docs.html">Docs</a>
-                        </li>
-                        <!-- <li class="nav-item">
-                        </li> -->
-                    </ul>
+<body class="flex flex-col min-h-screen bg-white text-slate-800">
+
+    <!-- Nav -->
+    <header class="border-b border-slate-200 bg-white">
+        <nav class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="index.html">
+                <img src="assets/images/logo_pikeandpine.png" alt="Pike & Pine Software" class="h-12 w-auto">
+            </a>
+            <button id="menu-toggle" class="sm:hidden p-2 rounded text-slate-600 hover:bg-slate-100" aria-label="Toggle menu">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+            <ul id="nav-links" class="hidden sm:flex gap-6 text-sm font-medium text-slate-600">
+                <li><a href="index.html" class="text-green-700 font-semibold">Home</a></li>
+                <li><a href="products.html" class="hover:text-green-700 transition-colors">Products</a></li>
+                <li><a href="docs.html" class="hover:text-green-700 transition-colors">Docs</a></li>
+            </ul>
+        </nav>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden sm:hidden border-t border-slate-100 bg-white px-4 py-3">
+            <ul class="flex flex-col gap-3 text-sm font-medium text-slate-600">
+                <li><a href="index.html" class="text-green-700 font-semibold">Home</a></li>
+                <li><a href="products.html" class="hover:text-green-700">Products</a></li>
+                <li><a href="docs.html" class="hover:text-green-700">Docs</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <main class="flex-1">
+        <section class="max-w-5xl mx-auto px-4 py-20 text-center">
+            <a href="index.html">
+                <img src="assets/images/logo_pikeandpine.png" alt="Pike & Pine Software" class="mx-auto h-32 w-auto mb-6">
+            </a>
+            <h1 class="text-4xl font-bold text-slate-900 mb-4">Pike & Pine Software</h1>
+            <p class="text-lg text-slate-500 max-w-xl mx-auto mb-8">
+                Building thoughtful software products that are simple, reliable, and built to last.
+            </p>
+            <a href="products.html" class="inline-block bg-green-700 text-white text-sm font-semibold px-6 py-3 rounded-lg hover:bg-green-800 transition-colors">
+                See What We're Building
+            </a>
+        </section>
+
+        <!-- What we do -->
+        <section class="bg-slate-50 border-y border-slate-200">
+            <div class="max-w-5xl mx-auto px-4 py-16">
+                <h2 class="text-2xl font-bold text-slate-900 mb-2 text-center">What We Do</h2>
+                <p class="text-slate-500 text-center mb-12 max-w-lg mx-auto">
+                    We design and build focused software tools for businesses and individuals who value clarity over complexity.
+                </p>
+                <div class="grid sm:grid-cols-3 gap-6">
+                    <div class="bg-white border border-slate-200 rounded-xl p-6">
+                        <div class="text-green-700 mb-3">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-slate-900 mb-1">Software Products</h3>
+                        <p class="text-sm text-slate-500">Purposefully designed tools that solve real problems without unnecessary overhead.</p>
+                    </div>
+                    <div class="bg-white border border-slate-200 rounded-xl p-6">
+                        <div class="text-green-700 mb-3">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-slate-900 mb-1">Built to Scale</h3>
+                        <p class="text-sm text-slate-500">From day one to day one thousand, our products grow with your needs.</p>
+                    </div>
+                    <div class="bg-white border border-slate-200 rounded-xl p-6">
+                        <div class="text-green-700 mb-3">
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-slate-900 mb-1">Privacy First</h3>
+                        <p class="text-sm text-slate-500">We take data privacy seriously. No dark patterns, no unnecessary tracking.</p>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <!-- Page specific content goes here -->
-    <div class="container my-auto">
-        <div class="row">
-            <div class="col-12 text-center">
-                <a href="index.html">
-                    <img src="assets/images/logo_pikeandpine.png" alt="Pike & Pine Logo" id="logo" class="mx-auto d-block">
-                </a>
-                <p class="coming-soon">Coming Soon.</p>
+        </section>
+
+        <!-- Products teaser -->
+        <section class="max-w-5xl mx-auto px-4 py-16 text-center">
+            <h2 class="text-2xl font-bold text-slate-900 mb-2">Products in the Works</h2>
+            <p class="text-slate-500 mb-8 max-w-md mx-auto">We're actively building. More details coming soon.</p>
+            <a href="products.html" class="text-green-700 font-semibold text-sm hover:underline">View upcoming products →</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 bg-slate-50">
+        <div class="max-w-5xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-slate-500">
+            <span>&copy; 2026 Pike & Pine Software LLC</span>
+            <div class="flex gap-5">
+                <a href="contact.html" class="hover:text-green-700 transition-colors">Contact</a>
+                <a href="about.html" class="hover:text-green-700 transition-colors">About</a>
+                <a href="privacy.html" class="hover:text-green-700 transition-colors">Privacy</a>
+                <a href="terms.html" class="hover:text-green-700 transition-colors">Terms</a>
             </div>
         </div>
-    </div>
+    </footer>
 
-<!-- Footer -->
-<footer class="mt-auto bg-light text-center">
-    <div class="footer-content p-3">
-        <div class="footer-links">
-            <a class="nav-link" href="contact.html">Contact</a> |
-            <a class="nav-link" href="about.html">About</a> |
-            <a class="nav-link" href="privacy.html">Privacy</a> |
-            <a class="nav-link" href="terms.html">Terms</a>
-        </div>
-        <div class="footer-copy">
-            © 2023 Pike & Pine Software LLC
-        </div>
-    </div>
-</footer>
-
-
-    <!-- Scripts -->
-    <script src="assets/js/scripts.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+        toggle.addEventListener('click', () => menu.classList.toggle('hidden'));
+    </script>
 </body>
 </html>
